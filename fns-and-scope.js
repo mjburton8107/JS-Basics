@@ -1,20 +1,29 @@
 //////////////////PROBLEM 1////////////////////
 
-//I just want to make sure this works...
 
 var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-  //Code Here
+function isTyler (name){
+  if (name === 'Tyler'){
+    return true;
+  } else return false;
+}
+
+console.log(isTyler(name));
 
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
+function getName(){
+  var userName = prompt('What is your name?');
+  return userName;
+}
 
-  //Code Here
+console.log(getName());
 
 
 //////////////////PROBLEM 3////////////////////
