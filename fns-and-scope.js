@@ -23,7 +23,7 @@ function getName(){
   return userName;
 }
 
-console.log(getName());
+// console.log(getName());
 
 
 //////////////////PROBLEM 3////////////////////
@@ -33,7 +33,13 @@ console.log(getName());
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
 
-  //Code Here
+function welcome(){
+    console.log("welcome is running")
+    var userName = getName();
+    var greeting = window.alert("Welcome " + userName);
+}
+
+welcome();
 
 
 //////////////////PROBLEM 4////////////////////
