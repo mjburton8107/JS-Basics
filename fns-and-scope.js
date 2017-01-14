@@ -11,8 +11,6 @@ function isTyler (name){
   } else return false;
 }
 
-console.log(isTyler(name));
-
 //////////////////PROBLEM 2////////////////////
 
 
@@ -36,7 +34,7 @@ function getName(){
 function welcome(){
     console.log("welcome is running")
     var userName = getName();
-    var greeting = window.alert("Welcome " + userName);
+    var greeting = window.alert("Welcome, " + userName);
 }
 
 welcome();
@@ -49,7 +47,9 @@ welcome();
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  /*a parameter is something defined in the function definition (e.g function myFunc(a,b)
+  ...a and b are parameters); whereas arguments are things passed in to the function
+  when it's called to take the place of parameters*/
 
 
 //////////////////PROBLEM 5////////////////////
@@ -59,8 +59,7 @@ welcome();
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
-
+  //0, undefined, NaN, false, null, ''
 
 
 //////////////////PROBLEM 6////////////////////
@@ -69,16 +68,20 @@ welcome();
 
 //Create a function called myName that returns your name
 
-  //Code Here
+  function myName(){
+    return "Mike Burton";
+  }
 
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
-  //Code Here
+var newMyName = myName;
+
 
 //Now alert the result of invoking newMyName
 
+window.alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -87,10 +90,17 @@ welcome();
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+  function outerFn() {
+    return function() {
+      return "Mike Burton"
+    }
+  }
+
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn.
+
+innerFn();
